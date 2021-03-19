@@ -7,44 +7,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="box.cs" t="Include" />
         <e p="exporter.cs" t="Include" />
-        <e p="HSVPicker" t="Include">
-          <e p="Editor" t="Include">
-            <e p="BoxSliderEditor.cs" t="Include" />
-            <e p="HSVPicker.Editors.asmdef" t="Include" />
-          </e>
-          <e p="Enums" t="Include">
-            <e p="ColorValues.cs" t="Include" />
-          </e>
-          <e p="Events" t="Include">
-            <e p="ColorChangedEvent.cs" t="Include" />
-            <e p="HSVChangedEvent.cs" t="Include" />
-          </e>
-          <e p="ExampleScripts" t="Include">
-            <e p="ColorPickerTester.cs" t="Include" />
-            <e p="TiltWindow.cs" t="Include" />
-          </e>
-          <e p="HSVPicker.asmdef" t="Include" />
-          <e p="Readme.txt" t="Include" />
-          <e p="UI" t="Include">
-            <e p="ColorImage.cs" t="Include" />
-            <e p="ColorLabel.cs" t="Include" />
-            <e p="ColorPicker.cs" t="Include" />
-            <e p="ColorPickerSetup.cs" t="Include" />
-            <e p="ColorPresetManager.cs" t="Include" />
-            <e p="ColorPresets.cs" t="Include" />
-            <e p="ColorSlider.cs" t="Include" />
-            <e p="ColorSliderImage.cs" t="Include" />
-            <e p="HexColorField.cs" t="Include" />
-            <e p="SVBoxSlider.cs" t="Include" />
-          </e>
-          <e p="UtilityScripts" t="Include">
-            <e p="BoxSlider.cs" t="Include" />
-            <e p="HSVUtil.cs" t="Include" />
-          </e>
-        </e>
-        <e p="PlaceCube.cs" t="Include" />
         <e p="QuickOutline" t="Include">
           <e p="Readme.txt" t="Include" />
           <e p="Resources" t="Include">
@@ -101,8 +64,6 @@
           <e p="FBXUnityMeshGetter.cs" t="Include" />
         </e>
       </e>
-      <e p="HSVPicker.csproj" t="IncludeRecursive" />
-      <e p="HSVPicker.Editors.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
