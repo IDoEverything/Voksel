@@ -21,10 +21,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="chunk.cs" t="Include" />
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
           <e p="VoxelData.cs" t="Include" />
+          <e p="voxelRenderer.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
