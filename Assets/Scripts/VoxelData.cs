@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class VoxelData
 {
+    public static int debugCubeSize = 5;
     public static readonly Vector3[] verts = new Vector3[8]
     {
         new Vector3(0.0f, 0.0f, 0.0f),
@@ -33,6 +34,16 @@ public static class VoxelData
         new Vector2 (1.0f, 0.0f),
         new Vector2 (0.0f, 1.0f),
         new Vector2 (1.0f, 1.0f)
+
+    };
+    public static readonly Vector3[] faceChecks = new Vector3[6] {
+
+        new Vector3(0.0f, 0.0f, -1.0f),
+        new Vector3(0.0f, 0.0f, 1.0f),
+        new Vector3(0.0f, 1.0f, 0.0f),
+        new Vector3(0.0f, -1.0f, 0.0f),
+        new Vector3(-1.0f, 0.0f, 0.0f),
+        new Vector3(1.0f, 0.0f, 0.0f)
 
     };
 

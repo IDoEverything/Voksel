@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="" />
+    <list default="true" id="c8bdbdb1-7e17-4619-9a5f-a9074f85f7e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voksel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VoxelData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VoxelData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/voxelRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/voxelRenderer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,8 +36,8 @@
       <option value="$PROJECT_DIR$/Assets/PlaceCube.cs" />
       <option value="$PROJECT_DIR$/Assets/exporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/editorCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/VoxelData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/chunk.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/VoxelData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/voxelRenderer.cs" />
     </changedPaths>
   </component>
@@ -101,6 +105,7 @@
       <workItem from="1615123609492" duration="1370000" />
       <workItem from="1615136720194" duration="4258000" />
       <workItem from="1615210812217" duration="1362000" />
+      <workItem from="1616261501302" duration="623000" />
     </task>
     <task id="LOCAL-00001" summary="ASCII FBX exporter added and camera jump on first time orbit fixed">
       <created>1615140325157</created>
