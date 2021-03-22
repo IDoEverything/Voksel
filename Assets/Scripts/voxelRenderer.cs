@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,28 +13,27 @@ public class voxelRenderer : MonoBehaviour
     List<int> triangles = new List<int>();
     List<Vector2> uv = new List<Vector2>();
 
-    private bool[,,] voxelBoundsMapping = new bool[VoxelData.debugCubeSize,VoxelData.debugCubeSize,VoxelData.debugCubeSize];
+    private byte[,,] voxelBoundsMapping = new byte[VoxelData.debugCubeSize,VoxelData.debugCubeSize,VoxelData.debugCubeSize];
     void Start()
     {
         calculateVoxelMapping();
-        createVoxelMeshData();
-        createMesh();
+        updateVoxelMeshData();
     }
 
     void calculateVoxelMapping()
     {
         for (int y = 0; y < VoxelData.debugCubeSize; y++) { for (int x = 0; x < VoxelData.debugCubeSize; x++) { for (int z = 0; z < VoxelData.debugCubeSize; z++)
             {
-                voxelBoundsMapping[x, y, z] = true;
+                voxelBoundsMapping[x, y, z] = 1;
             }
         } }
     }
 
-    void addVoxelData(Vector3 pos)
+    void updateVoxelData(Vector3 pos)
     {
         for (int p = 0; p < 6; p++)
         {
-            if (!checkVoxel(pos + VoxelData.faceChecks[p]))
+            if (checkVoxel(pos + VoxelData.faceChecks[p])== 0)
             {
                 for (int i = 0; i < 6; i++)
                 {
@@ -47,21 +47,39 @@ public class voxelRenderer : MonoBehaviour
         }
     }
 
-    void createVoxelMeshData()
+    void updateVoxelMeshData()
     {
+        clearVoxelMeshData();
         for (int y = 0; y < VoxelData.debugCubeSize; y++) { for (int x = 0; x < VoxelData.debugCubeSize; x++) { for (int z = 0; z < VoxelData.debugCubeSize; z++)
             {
-                addVoxelData(new Vector3(x,y,z));
+                updateVoxelData(new Vector3(x,y,z));
             }
         } }
+        createMesh();
     }
 
-    bool checkVoxel(Vector3 pos)
+    void clearVoxelMeshData()
+    {
+        vertexIndex = 0;
+        vertices.Clear();
+        triangles.Clear();
+        uv.Clear();
+    }
+
+    public void editVoxelData(Vector3 pos, byte newID)
+    {
+        int xCheck = Mathf.FloorToInt(pos.x);
+        int yCheck = Mathf.FloorToInt(pos.y);
+        int zCheck = Mathf.FloorToInt(pos.z);
+        voxelBoundsMapping[xCheck, yCheck, zCheck] = newID; 
+        updateVoxelMeshData();
+    }
+    byte checkVoxel(Vector3 pos)
     {
         int x = Mathf.FloorToInt(pos.x);
         int y = Mathf.FloorToInt(pos.y);
         int z = Mathf.FloorToInt(pos.z);
-        if (x < 0 || x > VoxelData.debugCubeSize - 1 || y < 0 || y > VoxelData.debugCubeSize-1 || z < 0 || z > VoxelData.debugCubeSize-1){ return false; }
+        if (x < 0 || x > VoxelData.debugCubeSize - 1 || y < 0 || y > VoxelData.debugCubeSize-1 || z < 0 || z > VoxelData.debugCubeSize-1){ return 0; }
         return voxelBoundsMapping[x, y, z];
     }
     void createMesh()

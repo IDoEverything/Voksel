@@ -21,6 +21,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CreateVoxel.cs" t="Include" />
           <e p="cursorManager.cs" t="Include" />
           <e p="editorCamera.cs" t="Include" />
           <e p="VoxelData.cs" t="Include" />
